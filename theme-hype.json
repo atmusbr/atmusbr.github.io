@@ -1,9 +1,9 @@
 {
-  "shadow": true,
   "main": "#FF00D9",
   "mainText": "#ffffff",
   "secondary": "#3B0764",
   "currency": "$",
+  "coins": "Hype Coins",
   "items": {
     "markers": {
       "Index": "markers",
@@ -13303,11 +13303,9 @@
     }
   },
   "inventory": {
-    "missions": true,
-    "blueprint": true,
     "slots": {
       "max": 100,
-      "default": 25,
+      "default": 30,
       "upgrade": {
         "slots": 50,
         "capacity": 300,
