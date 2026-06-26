@@ -1163,7 +1163,7 @@
 		"health": "#FF3D72",
 		"hunger": "#FFB84A",
 		"icons": "#FCFCFC",
-		"logo": 90,
+		"logo": { "image": "logo.png", "size": 90 },
 		"luck": "#F17C6E",
 		"modes": { "icon": "line", "info": 1, "status": 7, "vehicle": 2 },
 		"nitro": "#0A78E5",
