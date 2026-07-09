@@ -1,0 +1,14 @@
+.atm-svg {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  overflow: visible;
+  vertical-align: -0.125em;
+  color: inherit;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.atm-svg use {
+  pointer-events: none;
+}
