@@ -1,51 +1,7 @@
 /*!
- * Atmus Icons - All Styles
+ * Atmus Icons - Bulk
  * Prefix: atm-
  */
-
-@font-face {
-  font-family: "AtmusIconsStroke";
-  src:
-    url("./fonts/AtmusIconsStroke.woff2") format("woff2"),
-    url("./fonts/AtmusIconsStroke.woff") format("woff"),
-    url("./fonts/AtmusIconsStroke.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "AtmusIconsSolid";
-  src:
-    url("./fonts/AtmusIconsSolid.woff2") format("woff2"),
-    url("./fonts/AtmusIconsSolid.woff") format("woff"),
-    url("./fonts/AtmusIconsSolid.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "AtmusIconsDuotone";
-  src:
-    url("./fonts/AtmusIconsDuotone.woff2") format("woff2"),
-    url("./fonts/AtmusIconsDuotone.woff") format("woff"),
-    url("./fonts/AtmusIconsDuotone.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "AtmusIconsTwotone";
-  src:
-    url("./fonts/AtmusIconsTwotone.woff2") format("woff2"),
-    url("./fonts/AtmusIconsTwotone.woff") format("woff"),
-    url("./fonts/AtmusIconsTwotone.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
 
 @font-face {
   font-family: "AtmusIconsBulk";
@@ -61,7 +17,7 @@
 .atm,
 [class^="atm-"],
 [class*=" atm-"] {
-  font-family: "AtmusIconsSolid", "AtmusIconsStroke", "AtmusIconsDuotone", "AtmusIconsTwotone", "AtmusIconsBulk" !important;
+  font-family: "AtmusIconsBulk" !important;
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
@@ -70,26 +26,6 @@
   speak: never;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.atm.atm-stroke,
-.atm-stroke {
-  font-family: "AtmusIconsStroke" !important;
-}
-
-.atm.atm-solid,
-.atm-solid {
-  font-family: "AtmusIconsSolid" !important;
-}
-
-.atm.atm-duotone,
-.atm-duotone {
-  font-family: "AtmusIconsDuotone" !important;
-}
-
-.atm.atm-twotone,
-.atm-twotone {
-  font-family: "AtmusIconsTwotone" !important;
 }
 
 .atm.atm-bulk,

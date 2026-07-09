@@ -3609,12 +3609,12 @@
   content: "\e37d";
 }
 
-.atm-c-programming:before {
-  content: "\e37f";
-}
-
 .atm-c\+\+:before {
   content: "\e37e";
+}
+
+.atm-c-programming:before {
+  content: "\e37f";
 }
 
 .atm-cabinet-01:before {
