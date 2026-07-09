@@ -31,6 +31,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.atm.atm-twotone,
 .atm-twotone {
   font-family: "AtmusIconsTwotone" !important;
 }
@@ -3611,12 +3612,12 @@
   content: "\f37d";
 }
 
-.atm-c++:before {
-  content: "\f37e";
-}
-
 .atm-c-programming:before {
   content: "\f37f";
+}
+
+.atm-c++:before {
+  content: "\f37e";
 }
 
 .atm-cabinet-01:before {

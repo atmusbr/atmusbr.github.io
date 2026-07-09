@@ -4,34 +4,6 @@
  */
 
 @font-face {
-  font-family: "AtmusIconsBulk";
-  src: url("./fonts/AtmusIconsBulk.eot");
-  src:
-    url("./fonts/AtmusIconsBulk.eot?#iefix") format("embedded-opentype"),
-    url("./fonts/AtmusIconsBulk.woff2") format("woff2"),
-    url("./fonts/AtmusIconsBulk.woff") format("woff"),
-    url("./fonts/AtmusIconsBulk.ttf") format("truetype"),
-    url("./fonts/AtmusIconsBulk.svg#AtmusIconsBulk") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "AtmusIconsDuotone";
-  src: url("./fonts/AtmusIconsDuotone.eot");
-  src:
-    url("./fonts/AtmusIconsDuotone.eot?#iefix") format("embedded-opentype"),
-    url("./fonts/AtmusIconsDuotone.woff2") format("woff2"),
-    url("./fonts/AtmusIconsDuotone.woff") format("woff"),
-    url("./fonts/AtmusIconsDuotone.ttf") format("truetype"),
-    url("./fonts/AtmusIconsDuotone.svg#AtmusIconsDuotone") format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
   font-family: "AtmusIconsSolid";
   src: url("./fonts/AtmusIconsSolid.eot");
   src:
@@ -60,6 +32,20 @@
 }
 
 @font-face {
+  font-family: "AtmusIconsDuotone";
+  src: url("./fonts/AtmusIconsDuotone.eot");
+  src:
+    url("./fonts/AtmusIconsDuotone.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/AtmusIconsDuotone.woff2") format("woff2"),
+    url("./fonts/AtmusIconsDuotone.woff") format("woff"),
+    url("./fonts/AtmusIconsDuotone.ttf") format("truetype"),
+    url("./fonts/AtmusIconsDuotone.svg#AtmusIconsDuotone") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
   font-family: "AtmusIconsTwotone";
   src: url("./fonts/AtmusIconsTwotone.eot");
   src:
@@ -73,10 +59,24 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "AtmusIconsBulk";
+  src: url("./fonts/AtmusIconsBulk.eot");
+  src:
+    url("./fonts/AtmusIconsBulk.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/AtmusIconsBulk.woff2") format("woff2"),
+    url("./fonts/AtmusIconsBulk.woff") format("woff"),
+    url("./fonts/AtmusIconsBulk.ttf") format("truetype"),
+    url("./fonts/AtmusIconsBulk.svg#AtmusIconsBulk") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
 .atm,
 [class^="atm-"],
 [class*=" atm-"] {
-  font-family: "AtmusIconsStroke" !important;
+  font-family: "AtmusIconsSolid", "AtmusIconsStroke", "AtmusIconsDuotone", "AtmusIconsTwotone", "AtmusIconsBulk" !important;
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
@@ -87,24 +87,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.atm-bulk {
-  font-family: "AtmusIconsBulk" !important;
-}
-
-.atm-duotone {
-  font-family: "AtmusIconsDuotone" !important;
-}
-
+.atm.atm-solid,
 .atm-solid {
-  font-family: "AtmusIconsSolid" !important;
+  font-family: "AtmusIconsSolid", "AtmusIconsStroke", "AtmusIconsDuotone", "AtmusIconsTwotone", "AtmusIconsBulk" !important;
 }
 
+.atm.atm-stroke,
 .atm-stroke {
-  font-family: "AtmusIconsStroke" !important;
+  font-family: "AtmusIconsStroke", "AtmusIconsSolid", "AtmusIconsDuotone", "AtmusIconsTwotone", "AtmusIconsBulk" !important;
 }
 
+.atm.atm-duotone,
+.atm-duotone {
+  font-family: "AtmusIconsDuotone", "AtmusIconsStroke", "AtmusIconsSolid", "AtmusIconsTwotone", "AtmusIconsBulk" !important;
+}
+
+.atm.atm-twotone,
 .atm-twotone {
-  font-family: "AtmusIconsTwotone" !important;
+  font-family: "AtmusIconsTwotone", "AtmusIconsStroke", "AtmusIconsSolid", "AtmusIconsDuotone", "AtmusIconsBulk" !important;
+}
+
+.atm.atm-bulk,
+.atm-bulk {
+  font-family: "AtmusIconsBulk", "AtmusIconsStroke", "AtmusIconsSolid", "AtmusIconsDuotone", "AtmusIconsTwotone" !important;
 }
 
 .atm-1st-bracket:before {
