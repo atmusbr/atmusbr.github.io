@@ -3616,7 +3616,7 @@
   content: "\e37f";
 }
 
-.atm-c++:before {
+.atm-c\+\+:before {
   content: "\e37e";
 }
 
