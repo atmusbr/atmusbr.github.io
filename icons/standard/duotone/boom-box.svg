@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <circle opacity="0.4" cx="16" cy="15" r="2" fill="currentColor" />
+    <circle opacity="0.4" cx="8" cy="15" r="2" fill="currentColor" />
+    <path opacity="0.4" d="M4 5V9H20V5C20 3.89543 19.1046 3 18 3H6C4.89543 3 4 3.89543 4 5Z" fill="currentColor" />
+    <circle cx="16" cy="15" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="8" cy="15" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M2 19V11C2 9.89543 2.89543 9 4 9H20C21.1046 9 22 9.89543 22 11V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M4 5V9H20V5C20 3.89543 19.1046 3 18 3H6C4.89543 3 4 3.89543 4 5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
