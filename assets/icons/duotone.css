@@ -5,13 +5,10 @@
 
 @font-face {
   font-family: "AtmusIconsDuotone";
-  src: url("./fonts/AtmusIconsDuotone.eot");
   src:
-    url("./fonts/AtmusIconsDuotone.eot?#iefix") format("embedded-opentype"),
     url("./fonts/AtmusIconsDuotone.woff2") format("woff2"),
     url("./fonts/AtmusIconsDuotone.woff") format("woff"),
-    url("./fonts/AtmusIconsDuotone.ttf") format("truetype"),
-    url("./fonts/AtmusIconsDuotone.svg#AtmusIconsDuotone") format("svg");
+    url("./fonts/AtmusIconsDuotone.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: block;

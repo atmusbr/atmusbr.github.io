@@ -5,13 +5,10 @@
 
 @font-face {
   font-family: "AtmusIconsSolid";
-  src: url("./fonts/AtmusIconsSolid.eot");
   src:
-    url("./fonts/AtmusIconsSolid.eot?#iefix") format("embedded-opentype"),
     url("./fonts/AtmusIconsSolid.woff2") format("woff2"),
     url("./fonts/AtmusIconsSolid.woff") format("woff"),
-    url("./fonts/AtmusIconsSolid.ttf") format("truetype"),
-    url("./fonts/AtmusIconsSolid.svg#AtmusIconsSolid") format("svg");
+    url("./fonts/AtmusIconsSolid.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: block;
