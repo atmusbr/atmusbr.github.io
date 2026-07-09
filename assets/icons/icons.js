@@ -3,6 +3,7 @@
   var STYLES = ["stroke", "solid", "duotone", "twotone", "bulk"];
   var STYLE_SET = new Set(STYLES);
   var PROCESSED_ATTR = "data-atm-processed";
+  var SPRITE_CACHE = {};
 
   function getBaseUrl() {
     var script = document.currentScript;
@@ -16,7 +17,7 @@
     for (var index = scripts.length - 1; index >= 0; index--) {
       var src = scripts[index].src || "";
 
-      if (src.indexOf("atmus-icons.js") !== -1 || src.indexOf("atmus-icons.min.js") !== -1) {
+      if (src.indexOf("icons.js") !== -1 || src.indexOf("icons.min.js") !== -1) {
         return new URL("./", src).href;
       }
     }
@@ -81,6 +82,48 @@
     }
   }
 
+  function ensureSpriteLoaded(style, baseUrl, callback) {
+    if (SPRITE_CACHE[style] === "loaded") {
+      callback();
+      return;
+    }
+
+    if (SPRITE_CACHE[style] === "loading") {
+      setTimeout(function () {
+        ensureSpriteLoaded(style, baseUrl, callback);
+      }, 30);
+      return;
+    }
+
+    SPRITE_CACHE[style] = "loading";
+
+    var url = new URL("sprites/sprite-" + style + ".svg", baseUrl).href;
+
+    fetch(url)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Erro ao carregar sprite: " + url);
+        }
+
+        return response.text();
+      })
+      .then(function (svgText) {
+        var div = document.createElement("div");
+        div.style.display = "none";
+        div.setAttribute("data-atm-sprite", style);
+        div.innerHTML = svgText;
+
+        document.body.insertBefore(div, document.body.firstChild);
+
+        SPRITE_CACHE[style] = "loaded";
+        callback();
+      })
+      .catch(function (error) {
+        SPRITE_CACHE[style] = null;
+        console.error(error);
+      });
+  }
+
   function renderIcon(element, baseUrl) {
     if (!element || element.getAttribute(PROCESSED_ATTR)) {
       return;
@@ -96,24 +139,27 @@
       return;
     }
 
-    var symbolId = toSvgSymbolId(data.style, data.iconName);
-    var spriteUrl = new URL("sprites/sprite-" + data.style + ".svg#" + symbolId, baseUrl).href;
+    element.setAttribute(PROCESSED_ATTR, "true");
 
-    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    var use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    ensureSpriteLoaded(data.style, baseUrl, function () {
+      var symbolId = toSvgSymbolId(data.style, data.iconName);
 
-    copyAttributes(element, svg);
+      var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      var use = document.createElementNS("http://www.w3.org/2000/svg", "use");
 
-    svg.setAttribute(PROCESSED_ATTR, "true");
-    svg.setAttribute("aria-hidden", element.getAttribute("aria-hidden") || "true");
-    svg.setAttribute("focusable", "false");
-    svg.setAttribute("class", (element.getAttribute("class") || "") + " atm-svg");
+      copyAttributes(element, svg);
 
-    use.setAttribute("href", spriteUrl);
-    use.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", spriteUrl);
+      svg.setAttribute("data-atm-processed", "true");
+      svg.setAttribute("aria-hidden", element.getAttribute("aria-hidden") || "true");
+      svg.setAttribute("focusable", "false");
+      svg.setAttribute("class", (element.getAttribute("class") || "") + " atm-svg");
 
-    svg.appendChild(use);
-    element.replaceWith(svg);
+      use.setAttribute("href", "#" + symbolId);
+      use.setAttributeNS("http://www.w3.org/1999/xlink", "xlink:href", "#" + symbolId);
+
+      svg.appendChild(use);
+      element.replaceWith(svg);
+    });
   }
 
   function i2svg(root) {
